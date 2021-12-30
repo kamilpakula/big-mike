@@ -1,0 +1,126 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+.about{
+    height: 100vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $primaryColor;
+    @include breakpoint(tablet) {
+        grid-template-columns: 100%;
+    }
+    .about__projects{
+        width: 100%;
+        background-color: $secondaryColor;
+        display: grid;
+        grid-template-columns: 19fr 1fr;
+        align-content: center;
+        justify-content: space-between;
+        @include breakpoint(tablet) {
+            margin-top: 10vh;
+            display:flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .about__area{
+            .about__next{
+                display: none;
+               border: none;
+               background-color: $secondaryColor;
+               .about__arrow{
+                font-size: 40px;
+                opacity: 20%;
+                @include breakpoint(tablet) {
+                   font-size: 25px;
+                }
+               }
+            }
+          display: flex;
+          justify-content: center;
+          padding: 30px;
+          background-color: $secondaryColor;
+            
+            .about__square{
+                @include centra(center);
+                width: 350px;
+                height: 400px;
+                background-color: $primaryColor;
+                flex-direction: column;
+                .about__link{
+                    color: $secondaryColor;
+                    margin-bottom: 10px;
+                }
+                .about__img{
+                    width: 250px;
+                    height: 300px;
+                }
+                
+            }
+        }
+        .about__heading{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include breakpoint(tablet) {
+               
+                width: 100%;
+                justify-content: center;
+            }
+            .about__span{
+                width: 20px;
+                font-size: 32px;
+                display: block;
+                
+                @include breakpoint(tablet) {
+                    display: inline;
+                    width: auto;
+                    
+                }
+            }
+        }
+    }
+    .about__other{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background: url('../images/pole.jpg');
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        color: $secondaryColor;
+       
+        @include breakpoint(tablet) {
+            display: none;
+        }
+
+        .about__clouds {
+            position: relative;
+            bottom: -10vh;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            fill: $secondaryColor;
+            z-index: 5;
+        }
+
+        .about__triangle {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            transform: rotate(180deg);
+            fill:$primaryColor;
+        }
+        
+       
+        
+        
+        
+        
+       
+    }
+
+
+}   

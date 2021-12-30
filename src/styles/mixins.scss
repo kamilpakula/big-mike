@@ -1,0 +1,19 @@
+@mixin breakpoint($point) {
+    @if $point == mobile {
+        @media screen and(max-width:576px) 
+        { @content;
+        }
+    }
+        @else if $point == tablet {
+            @media screen and(max-width: 1200px) 
+            {@content;
+        }
+    }
+        
+
+}
+@mixin centra($justify){
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}

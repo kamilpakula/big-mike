@@ -1,0 +1,72 @@
+@import "mixins.scss";
+@import "./variables.scss";
+
+.skills{
+    height: 80vh;
+    width: 100%;
+    .skills__inscription{
+        @include centra(center);
+        flex-direction: column;
+        width: 60vw;
+        margin: 12vh auto 10px auto ;
+        border-bottom: 2px solid $primaryColor;
+        @include breakpoint(mobile) {
+           width: 90%;
+        }
+        .skills__h2{
+            font-size: 25px;
+            margin:  0 ;
+            @include breakpoint(mobile) {
+                font-size: 19px ;
+            }
+        }
+        .skills__h1{
+            font-size: 30px;
+            margin-bottom: 10px;
+            @include breakpoint(mobile) {
+               font-size: 25px;
+            }
+        }
+        
+
+
+    }
+    .skills__cards{
+        @include centra(center);
+        flex-wrap: wrap;
+        margin: 10px; 
+        .skills__skills{ 
+            @include centra(space-around);
+            height: 200px;
+            min-width:450px;
+            margin: 10px;
+            padding: 20px;
+            flex-direction: column;
+            background: radial-gradient(circle, rgba(161,236,255,1) 0%, rgba(13,110,253,1) 100%);            
+            color: $secondaryColor;
+            transition: 0.2s;
+            
+            .skills__head{
+                display: inline-flex;
+                justify-content: left;
+                .skills__icon{
+                    margin-right: 50px;
+                    font-size: 30px;
+                    color: $primaryColor;
+                }
+                
+            }
+           
+            .skills__txt{
+                text-align: center;
+                color: $primaryColor;
+               font-weight: 800;
+                line-height: 25px;
+            }
+        }
+        .skills__skills:hover{
+            box-shadow: 0 0 1em $primaryColor ;
+            
+        }
+    }
+}

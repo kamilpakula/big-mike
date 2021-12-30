@@ -1,0 +1,176 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+
+.main{
+    @include centra(center);
+    width: 100%;
+    height: 100vh;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+    .main__square{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%) ;                     
+        width: 60%;
+        height: 30%;
+        color: rgb(255, 255, 255);
+        border: 2px solid $secondaryColor;
+        box-shadow: 0 8px 52px 0 rgba(64, 123, 255, 0.77);
+        z-index: 1;
+        @include breakpoint(mobile) {
+            top: 60%;
+        }
+        @include breakpoint(tablet) {
+            flex-direction: column;
+            width: 90%;
+            color: $primaryColor;
+            align-items: center;
+            top: 65%;
+        }
+
+        .main__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items:flex-start;
+            width: 100%;
+            height: 100%;
+            font-weight: 600;
+            margin-left: 20px;
+          
+            @include breakpoint(tablet) {
+                flex-direction: column;
+                align-items:center;
+            }
+            
+            .main__h2{
+                
+                margin: 20px 0;
+                
+                -webkit-box-reflect: below 1px linear-gradient(transparent, #0004) ;
+                @include breakpoint(mobile) {
+                    margin: 5px 0;
+                }
+            }
+            .main__h3{
+                margin: 20px 0;
+                //text-shadow: 0 5px 10px #407bff;
+                -webkit-box-reflect: below 1px linear-gradient(transparent, #0004) ;
+                @include breakpoint(mobile) {
+                    margin: 5px 0;
+                }
+            }
+            .main__p{
+                margin: 10px 0;
+                background-color: $secondaryColor;
+                text-decoration: none;
+                border: 2px solid $primaryColor;
+                border-radius: 10%;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                .main__link{
+                    text-decoration: none;
+                    color:$primaryColor;
+                }
+                @include breakpoint(mobile) {
+                    margin: 5px 0;
+                }
+            }
+            .main__p:hover{
+                text-decoration: underline;
+                
+            }
+        }
+       
+
+     }
+     .main__left{
+
+        width: 50%;
+        height: 100%;
+        background-color: $primaryColor;
+        @include breakpoint(tablet) {
+            width: 50%;
+         }
+         @include breakpoint(tablet) {
+            display: none;
+         }
+     }
+     .main__right{ 
+        @include centra(center);
+        width: 50%;
+        height: 100%;
+        background-color:rgb(255, 255, 255);
+        
+        
+        @include breakpoint(tablet) {
+            @include centra(space-between);
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+         }
+        .main__picture{
+            z-index: 3;
+            width: 50%;
+            @include breakpoint(mobile) {
+                left: 50%;
+                
+            }
+            @include breakpoint(tablet) {
+                margin: 50px 0;
+                position:absolute;
+                top: 30%;
+                left: 60%;
+                margin: auto;
+                transform: translate(-50%, -50%) ;
+             }
+            .main__img{
+                width: 500px;
+                height: 500px;
+                @include breakpoint(mobile) {
+                    width: 150px;
+                    height: 150px;
+                }
+                @include breakpoint(tablet) {
+                    width: 40vh;
+                    height: 40vh;
+                }
+             
+                
+            }
+        }
+        
+        .main__btns{
+            display: flex;
+            justify-content: end;
+            align-items:flex-end;
+            padding: 20px;
+            height: 100%;
+
+        .main__btn{
+            margin: 20px;
+            background-color: $secondaryColor;
+            border: 0;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            .main__linkmedia{
+                
+                @include centra(center);
+                text-decoration: none;
+                color: $primaryColor;
+               
+            }
+        }
+        
+     }}
+}

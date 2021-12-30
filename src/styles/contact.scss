@@ -1,0 +1,115 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.contact{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 40% 50%;
+    grid-template-rows: 100% 100%;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+     }
+    .contact__black{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primaryColor;
+        clip-path: polygon(0% 0%, 55% 0%, 100% 50%, 55% 100%, 0% 100%);
+        @include breakpoint(mobile) {
+            display: none;
+         }
+    }
+    .contact__left{
+        background-color:$secondaryColor;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(mobile) {
+            margin-top: 10vh;
+            height: 20%;
+            @include centra(center);
+            justify-content: center;
+            
+         }
+    }
+    
+    .contact__h{
+        margin-bottom: 20px;
+
+    }
+    .contact__email{
+       .contact__h{
+           font-size: 35px;
+       }
+        .contact__icon{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .contact__link{
+            text-decoration: none;
+            color: $contrastColor;
+            font-size: 25px;
+        }
+    }
+    .contact__right{
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        background-color:$primaryColor;
+        padding: 10px;
+        @include breakpoint(mobile) {
+            height: 70%;
+         }
+         .contact__p1{
+             color: $contrastColor;
+             text-align: center;
+         }
+     .contact__form{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
+        
+      .contact__input{
+        height: 50px;
+        padding: 10px;
+        width: 200px;
+        margin: auto;
+        margin-bottom: 10px;
+        
+      }
+      .contact__area {
+        height: 100px;
+        width: 300px;
+        padding: 10px;
+        margin:10px;
+        
+     }
+     .contact__p{
+         color: $contrastColor;
+         text-align: center;
+     }
+     .contact__btn{
+        font-size: 20px;
+        margin: auto;
+        background-color: $secondaryColor;
+        font-weight: 600;
+        border:none;
+        transition: 0.4s;
+        height: 50px;
+        width: 70px;
+        border-radius: 20%;
+        cursor: pointer;
+
+     }
+     .contact__btn:hover{
+         color: $contrastColor;
+     }
+    }
+    }
+}
