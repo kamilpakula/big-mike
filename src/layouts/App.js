@@ -11,7 +11,7 @@ import Pages from "./Pages";
 class App extends Component {
     render() {
         return (
-            <Router basename={ProcessingInstruction.env.PUBLIC_URL}>
+            <Router basename={process.env.PUBLIC_URL}>
                 <div className="App">
                     <header className="Heads">{<Header />}</header>
                     <section className="Start">{<Pages />}</section>
