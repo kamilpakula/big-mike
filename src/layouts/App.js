@@ -3,10 +3,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "../styles/App.scss";
 import Header from "./Header";
 import Pages from "./Pages";
-//import Main from "./Main";
-//import Contact from "../components/Contact";
-//import Skills from "./Skills";
-//import About from "./About";
 
 class App extends Component {
     render() {
@@ -22,6 +18,3 @@ class App extends Component {
 }
 
 export default App;
-//<main className="Main">{<Main />}</main>
-//<section className="Skills">{<Skills />}</section>
-//<section className="About">{<About />}</section>

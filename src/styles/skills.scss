@@ -38,14 +38,17 @@
         .skills__skills{ 
             @include centra(space-around);
             height: 200px;
-            min-width:450px;
+            width:450px;
             margin: 10px;
             padding: 20px;
             flex-direction: column;
             background: radial-gradient(circle, rgba(161,236,255,1) 0%, rgba(13,110,253,1) 100%);            
             color: $secondaryColor;
             transition: 0.2s;
-            
+            @include breakpoint(mobile){
+                min-width: none;
+               width: 90%;
+            }
             .skills__head{
                 display: inline-flex;
                 justify-content: left;
